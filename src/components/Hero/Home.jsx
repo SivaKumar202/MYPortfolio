@@ -1,0 +1,154 @@
+import React from "react";
+import Navbar from "../Navbar/Navbar";
+import css from "../../assets/HomeAssets/css.png";
+import html from "../../assets/HomeAssets/html.png";
+import node from "../../assets/HomeAssets/nodejs.png";
+import figma from "../../assets/HomeAssets/figma.png";
+import me from "../../assets/HomeAssets/me.png";
+import left from "../../assets/HomeAssets/left.png";
+import right from "../../assets/HomeAssets/right.png";
+import ring2 from "../../assets/HomeAssets/Ellipse2.png";
+import ring3 from "../../assets/HomeAssets/Ellipse3.png";
+import { FaGithub, FaInstagram } from "react-icons/fa";
+import { BsLinkedin } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { SiCodechef } from "react-icons/si";
+import { FaArrowRightLong } from "react-icons/fa6";
+
+function Home() {
+  return (
+    <>
+      <div className="bg-gradient-to-br from-black via-black to-[#FC530A] text-white p-4 w-screen h-screen">
+        <Navbar />
+        <div>
+          <section className="flex justify-around items-center px-16 py-22">
+            {/* Left Column */}
+            <div className="flex flex-col gap-4 max-w-xl">
+              <h2 className="text-xl font-light">
+                Hey, I am{" "}
+                <span className="text-[#FC530A] font-semibold">Siva Kumar</span>
+              </h2>
+              <h1 className="text-5xl font-bold leading-tight">
+                Full Stack Developer
+              </h1>
+              <p className="text-xl text-gray-300">
+                I’m eager to connect with{" "}
+                <b className="text-[#FC530A]">professionals</b>, collaborate on
+                <br />
+                <b className="text-[#FC530A]">open-source</b>, and contribute
+                meaningfully to the{" "}
+                <b className="text-[#FC530A]">tech industry</b>.
+              </p>
+              <div className="flex gap-4 mt-4 mx-auto items-center justify-center">
+                <div className="flex items-center gap-x-3">
+                  <a href="https://github.com/SivaKumar202" target="_blank">
+                    <FaGithub className="cursor-pointer text-3xl hover:scale-110 transition duration-200" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/siva-kumar-jujjavarapu/"
+                    target="_blank"
+                  >
+                    <BsLinkedin className="cursor-pointer text-3xl hover:scale-110 hover:bg-blue-800" />
+                  </a>
+                  <a
+                    href="https://www.codechef.com/users/siva_kumar807"
+                    target="_blank"
+                  >
+                    <SiCodechef className="cursor-pointer text-3xl hover:scale-110" />
+                  </a>
+                  <a
+                    href="mailto:sivakumarjujjavarapu123@gmail.com"
+                    target="_blank"
+                  >
+                    <MdEmail className="cursor-pointer text-3xl hover:scale-110 transition-transform duration-200" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/siva_kumar_jujjavarapu/"
+                    target="_blank"
+                  >
+                    <FaInstagram className="cursor-pointer text-3xl hover:scale-110" />
+                  </a>
+                </div>
+                <div className="border-2 rounded-3xl px-5 py-3 border-[#C68313] flex items-center gap-x-2 cursor-pointer hover:bg-[#FC530A] hover:text-black transition duration-200">
+                  <img
+                    src={
+                      "https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif"
+                    }
+                    alt="👋"
+                    width="32"
+                    height="32"
+                  />
+                  <a
+                    href="https://www.linkedin.com/in/siva-kumar-jujjavarapu/"
+                    target="_blank"
+                  >
+                    <button className="cursor-pointer">
+                      Let's connect
+                    </button>
+                  </a>
+                    <FaArrowRightLong />
+                </div>
+              </div>
+              <hr className="text-gray-500" />
+              <img
+                src={left}
+                alt="icon"
+                width={150}
+                height={100}
+                className="absolute bottom-0 left-0"
+              />
+            </div>
+
+            {/* Right Column */}
+            <img
+              src={right}
+              width={150}
+              height={90}
+              alt="icon"
+              className="absolute top-0 right-0"
+            />
+            <div className="relative w-[400px] h-[400px]">
+              {/* Background rings - lowest layer */}
+              <div className="absolute inset-0 z-0 flex justify-center">
+                <img src={ring2} alt="ring2" className="absolute w-full p-10" />
+                <img src={ring2} alt="ring2" className="absolute w-full p-20" />
+                <img src={ring3} alt="ring3" className="absolute w-full " />
+              </div>
+
+              {/* Character - middle layer */}
+              <img
+                src={me}
+                alt="Character"
+                className="absolute bottom-0 right-4 z-20 "
+              />
+
+              {/* Floating tech icons - top layer */}
+              <img
+                src={html}
+                className="absolute top-5 left-5  w-20 z-30"
+                alt="HTML"
+              />
+              <img
+                src={css}
+                className="absolute top-5 right-5 w-15 z-30"
+                alt="CSS"
+              />
+              <img
+                src={figma}
+                className="absolute top-50 right-[-28px] w-15 z-30"
+                alt="Figma"
+              />
+              <img
+                src={node}
+                className="absolute bottom-30 left-[-15px] w-15 z-30"
+                alt="Node.js"
+              />
+            </div>
+          </section>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Home;
