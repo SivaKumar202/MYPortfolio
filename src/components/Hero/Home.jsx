@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
 import css from "../../assets/HomeAssets/css.png";
 import html from "../../assets/HomeAssets/html.png";
 import node from "../../assets/HomeAssets/nodejs.png";
@@ -18,10 +17,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 function Home() {
   return (
     <>
-      <div className="bg-gradient-to-br from-black via-black to-[#FC530A] text-white p-4 w-screen h-screen">
-        <Navbar />
+      <div className="bg-gradient-to-br from-black via-black to-[#FC530A] text-white">
         <div>
-          <section className="flex justify-around items-center px-16 py-22">
+          <section className="flex justify-around items-center px-16 py-24">
             {/* Left Column */}
             <div className="flex flex-col gap-4 max-w-xl">
               <h2 className="text-xl font-light">
