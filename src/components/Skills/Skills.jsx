@@ -2,7 +2,6 @@ import React from "react";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import { SiCodechef } from "react-icons/si";
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
 import BootStrap from "../../assets/SkillsAssets/BootStrap.png";
