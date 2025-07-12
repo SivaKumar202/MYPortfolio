@@ -19,25 +19,27 @@ function Home() {
     <>
       <div className="bg-gradient-to-br from-black via-black to-[#FC530A] text-white">
         <div>
-          <section className="flex justify-around items-center px-16 py-24">
+          <section className="flex flex-col md:flex-row justify-center md:justify-around items-center px-6 md:px-16 py-16 md:py-24 space-y-12 md:space-y-0">
             {/* Left Column */}
-            <div className="flex flex-col gap-4 max-w-xl">
-              <h2 className="text-xl font-light">
+            <div className="flex flex-col gap-4 max-w-xl text-center md:text-left">
+              <h2 className="text-lg md:text-xl font-light">
                 Hey, I am{" "}
                 <span className="text-[#FC530A] font-semibold">Siva Kumar</span>
               </h2>
-              <h1 className="text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                 Full Stack Developer
               </h1>
-              <p className="text-xl text-gray-300">
+              <p className="text-base md:text-xl text-gray-300">
                 I’m eager to connect with{" "}
                 <b className="text-[#FC530A]">professionals</b>, collaborate on
-                <br />
+                <br className="hidden md:block" />
                 <b className="text-[#FC530A]">open-source</b>, and contribute
                 meaningfully to the{" "}
                 <b className="text-[#FC530A]">tech industry</b>.
               </p>
-              <div className="flex gap-4 mt-4 mx-auto items-center justify-center">
+
+              {/* Social Links */}
+              <div className="flex flex-col md:flex-row gap-4 mt-6 mx-auto md:mx-0 items-center justify-center">
                 <div className="flex items-center gap-x-3">
                   <a href="https://github.com/SivaKumar202" target="_blank">
                     <FaGithub className="cursor-pointer text-3xl hover:scale-110 transition duration-200" />
@@ -67,11 +69,11 @@ function Home() {
                     <FaInstagram className="cursor-pointer text-3xl hover:scale-110" />
                   </a>
                 </div>
+
+                {/* Connect Button */}
                 <div className="border-2 rounded-3xl px-5 py-3 border-[#C68313] flex items-center gap-x-2 cursor-pointer hover:bg-[#FC530A] hover:text-black transition duration-200">
                   <img
-                    src={
-                      "https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif"
-                    }
+                    src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif"
                     alt="👋"
                     width="32"
                     height="32"
@@ -80,68 +82,76 @@ function Home() {
                     href="https://www.linkedin.com/in/siva-kumar-jujjavarapu/"
                     target="_blank"
                   >
-                    <button className="cursor-pointer">
-                      Let's connect
-                    </button>
+                    <button className="cursor-pointer">Let's connect</button>
                   </a>
-                    <FaArrowRightLong />
+                  <FaArrowRightLong />
                 </div>
               </div>
-              <hr className="text-gray-500" />
+
+              <hr className="text-gray-500 mt-6" />
               <img
                 src={left}
                 alt="icon"
-                width={150}
+                width={100}
                 height={100}
-                className="absolute bottom-0 left-0"
+                className="absolute bottom-0 left-0 hidden md:block"
               />
             </div>
 
             {/* Right Column */}
-            <img
-              src={right}
-              width={150}
-              height={90}
-              alt="icon"
-              className="absolute top-0 right-0"
-            />
-            <div className="relative w-[400px] h-[400px]">
-              {/* Background rings - lowest layer */}
+            <div className="relative w-72 md:w-[400px] h-72 md:h-[400px]">
+              {/* Background rings */}
               <div className="absolute inset-0 z-0 flex justify-center">
-                <img src={ring2} alt="ring2" className="absolute w-full p-10" />
-                <img src={ring2} alt="ring2" className="absolute w-full p-20" />
-                <img src={ring3} alt="ring3" className="absolute w-full " />
+                <img
+                  src={ring2}
+                  alt="ring2"
+                  className="absolute w-full p-6 md:p-10"
+                />
+                <img
+                  src={ring2}
+                  alt="ring2"
+                  className="absolute w-full p-12 md:p-20"
+                />
+                <img src={ring3} alt="ring3" className="absolute w-full" />
               </div>
 
-              {/* Character - middle layer */}
+              {/* Character */}
               <img
                 src={me}
                 alt="Character"
-                className="absolute bottom-0 right-4 z-20 "
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 w-auto md:w-auto md:right-4 md:left-auto md:translate-x-0"
               />
 
-              {/* Floating tech icons - top layer */}
+              {/* Floating Tech Icons */}
               <img
                 src={html}
-                className="absolute top-5 left-5  w-20 z-30"
+                className="absolute top-3 left-3 w-12 md:w-20 z-30"
                 alt="HTML"
               />
               <img
                 src={css}
-                className="absolute top-5 right-5 w-15 z-30"
+                className="absolute top-3 right-3 w-12 md:w-16 z-30"
                 alt="CSS"
               />
               <img
                 src={figma}
-                className="absolute top-50 right-[-28px] w-15 z-30"
+                className="absolute bottom-10 right-[-10px] w-10 md:w-16 z-30"
                 alt="Figma"
               />
               <img
                 src={node}
-                className="absolute bottom-30 left-[-15px] w-15 z-30"
+                className="absolute bottom-10 left-[-10px] w-10 md:w-16 z-30"
                 alt="Node.js"
               />
             </div>
+
+            <img
+              src={right}
+              width={100}
+              height={100}
+              alt="icon"
+              className="absolute top-0 right-0 hidden md:block"
+            />
           </section>
         </div>
       </div>
