@@ -1,0 +1,26 @@
+.animated-navbar-border {
+  background: linear-gradient(
+    135deg,
+    #ff6ec4,
+    #7873f5,
+    #4ADEDE,
+    #C084FC,
+    #FC530A
+  );
+  background-size: 400% 400%;
+  animation: gradient-border-glow 8s ease infinite;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(252, 83, 10, 0.3);
+}
+
+@keyframes gradient-border-glow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

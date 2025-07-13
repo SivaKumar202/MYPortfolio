@@ -1,8 +1,9 @@
 import React from "react";
-import Github from "../../assets/SocialIcons/GitHub.png"
-import Gmail from "../../assets/SocialIcons/Gmail.png"
-import Insta from "../../assets/SocialIcons/instagram.png"
-import linkedin from "../../assets/SocialIcons/Linkedin.png"
+import "./index.css";
+import Github from "../../assets/SocialIcons/GitHub.png";
+import Gmail from "../../assets/SocialIcons/Gmail.png";
+import Insta from "../../assets/SocialIcons/instagram.png";
+import linkedin from "../../assets/SocialIcons/Linkedin.png";
 import css from "../../assets/HomeAssets/css.png";
 import html from "../../assets/HomeAssets/html.png";
 import node from "../../assets/HomeAssets/nodejs.png";
@@ -12,10 +13,6 @@ import left from "../../assets/HomeAssets/left.png";
 import right from "../../assets/HomeAssets/right.png";
 import ring2 from "../../assets/HomeAssets/Ellipse2.png";
 import ring3 from "../../assets/HomeAssets/Ellipse3.png";
-import { FaGithub, FaInstagram } from "react-icons/fa";
-import { BsLinkedin } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
-import { SiCodechef } from "react-icons/si";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 function Home() {
@@ -30,9 +27,10 @@ function Home() {
                 Hey, I am{" "}
                 <span className="text-[#FC530A] font-semibold">Siva Kumar</span>
               </h2>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-[#7873f5] via-[#4ADEDE] to-[#C084FC] bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-text">
                 Full Stack Developer
               </h1>
+
               <p className="text-base md:text-xl text-gray-300">
                 I’m eager to connect with{" "}
                 <b className="text-[#FC530A]">professionals</b>, collaborate on
@@ -46,7 +44,7 @@ function Home() {
               <div className="flex flex-col md:flex-row gap-4 mt-6 mx-auto md:mx-0 items-center justify-center">
                 <div className="flex items-center gap-x-3">
                   <a href="https://github.com/SivaKumar202" target="_blank">
-                   <img width={45} height={45} src={Github} alt="GitHUb" />
+                    <img width={45} height={45} src={Github} alt="GitHUb" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/siva-kumar-jujjavarapu/"
