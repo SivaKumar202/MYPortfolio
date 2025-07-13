@@ -1,4 +1,5 @@
 import React from "react";
+import "./About.css"
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
 import BootStrap from "../../assets/SkillsAssets/BootStrap.png";
@@ -19,54 +20,59 @@ import Tailwind from "../../assets/SkillsAssets/Tailwind.png";
 import TypeScript from "../../assets/SkillsAssets/TypeScript.png";
 import netlify from "../../assets/SkillsAssets/netlify.png";
 import Vercel from "../../assets/SkillsAssets/Vercel.png";
-import AboutMe from "../../assets/AboutMe/AboutMe.png";
+import AboutMe from "../../assets/AboutMe/aboutme.png";
 
 function About() {
   return (
-    <div className="px-4 py-10">
-      <h1 className="text-4xl text-white text-center mt-10 mb-10">About Me</h1>
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-7xl mx-auto">
-        <div className="w-full md:w-1/2">
-          <img src={AboutMe} alt="Siva Kumar" className="rounded-xl shadow-lg" />
-        </div>
-        <div className="w-full md:w-1/2 bg-[#1E1E1E] text-white p-6 rounded-2xl shadow-lg">
-          <h1 className="text-2xl font-bold mb-4">
-            Curious About Me? Here You Go:
-          </h1>
-          <p className="mb-4 leading-relaxed">
-            Hey there! I’m <b>Siva Kumar</b>, a passionate and driven Full Stack
-            Developer dedicated to crafting clean, scalable, and intuitive web
-            applications. I'm currently building real-world projects to
-            strengthen in the <b>MERN Stack</b> (MongoDB, Express, React,
-            Node.js), where I’m actively building real-world projects to sharpen
-            my skills and deliver impactful solutions.
-          </p>
-          <p className="mb-4 leading-relaxed">
-            I’m always excited to collaborate with{" "}
-            <b>fellow developers, contribute to open-source projects</b>, and
-            connect with like-minded professionals to push the boundaries of
-            what’s possible in tech.
-          </p>
-          <p className="mb-2 font-bold">Skills & Technologies</p>
-          <div className="flex flex-wrap gap-3">
-            <img width={70} height={70} src={HTML} alt="HTML" />
-            <img width={70} height={70} src={CSS} alt="CSS" />
-            <img width={70} height={70} src={BootStrap} alt="Bootstrap" />
-            <img width={70} height={70} src={js} alt="JavaScript" />
-            <img width={70} height={70} src={Reactjs} alt="React" />
-            <img width={70} height={70} src={Tailwind} alt="Tailwind" />
-            <img width={70} height={70} src={MUI} alt="MUI" />
-            <img width={70} height={70} src={Node} alt="Node.js" />
-            <img width={70} height={70} src={Express} alt="Express" />
-            <img width={70} height={70} src={git} alt="Git" />
-            <img width={70} height={70} src={github} alt="GitHub" />
-            <img width={70} height={70} src={MongoDB} alt="MongoDB" />
-            <img width={70} height={70} src={Python} alt="Python" />
-            <img width={70} height={70} src={CPP} alt="C++" />
-          </div>
+<div className="px-4 py-10">
+  <h1 className="text-4xl text-white text-center mt-10 mb-10 font-bold">About Me</h1>
+  <div className="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-7xl mx-auto ">
+    <div className="w-full md:w-1/2">
+      <img src={AboutMe} alt="Siva Kumar" className="rounded-xl shadow-lg"  />
+    </div>
+
+    {/* Animated Border Wrapper */}
+    <div className="relative group animated-aboutBorder rounded-2xl p-[2px] w-full md:w-1/2 m-10">
+      <div className="bg-[#1E1E1E] text-white p-6 rounded-2xl shadow-lg transition-all duration-300 group-hover:scale-[1.02]">
+        <h1 className="text-2xl font-bold mb-4">
+          Curious About Me? Here You Go:
+        </h1>
+        <p className="mb-4 leading-relaxed">
+          Hey there! I’m <b>Siva Kumar</b>, a passionate and driven Full Stack
+          Developer dedicated to crafting clean, scalable, and intuitive web
+          applications. I'm currently building real-world projects to strengthen
+          in the <b><span className="text-green-400">M</span><span className="text-orange-400">E</span><span className="text-blue-400">R</span><span className="text-green-400">N</span> Stack</b> (MongoDB, Express, React, Node.js), where I’m
+          actively building real-world projects to sharpen my skills and deliver
+          impactful solutions.
+        </p>
+        <p className="mb-4 leading-relaxed">
+          I’m always excited to collaborate with <b className="bg-gradient-to-r from-[#7873f5] to-[#4ADEDE]  bg-clip-text text-transparent">fellow developers, contribute to open-source projects</b>, and connect with <b className="bg-gradient-to-r from-[#7873f5] via-[#4ADEDE] to-[#C084FC] bg-clip-text text-transparent">like-minded professionals</b> to push the boundaries of what’s possible in tech.
+        </p>
+        <p className="mb-2 font-bold">Skills & Technologies</p>
+        <div className="flex flex-wrap gap-3">
+          <img width={70} height={70} src={HTML} alt="HTML" />
+          <img width={70} height={70} src={CSS} alt="CSS" />
+          <img width={70} height={70} src={BootStrap} alt="Bootstrap" />
+          <img width={70} height={70} src={js} alt="JavaScript" />
+          <img width={70} height={70} src={Reactjs} alt="React" />
+          <img width={70} height={70} src={Redux} alt="Redux" />
+          <img width={70} height={70} src={Tailwind} alt="Tailwind" />
+          <img width={70} height={70} src={MUI} alt="MUI" />
+          <img width={70} height={70} src={Node} alt="Node.js" />
+          <img width={70} height={70} src={Express} alt="Express" />
+          <img width={70} height={70} src={git} alt="Git" />
+          <img width={70} height={70} src={github} alt="GitHub" />
+          <img width={70} height={70} src={MongoDB} alt="MongoDB" />
+          <img width={70} height={70} src={Python} alt="Python" />
+          <img width={70} height={70} src={CPP} alt="C++" />
+          <img width={70} height={70} src={FireBase} alt="Firebase" />
+          <img width={70} height={70} src={post} alt="postMan" />
         </div>
       </div>
     </div>
+  </div>
+</div>
+
   );
 }
 

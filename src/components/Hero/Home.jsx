@@ -1,4 +1,8 @@
 import React from "react";
+import Github from "../../assets/SocialIcons/GitHub.png"
+import Gmail from "../../assets/SocialIcons/Gmail.png"
+import Insta from "../../assets/SocialIcons/instagram.png"
+import linkedin from "../../assets/SocialIcons/Linkedin.png"
 import css from "../../assets/HomeAssets/css.png";
 import html from "../../assets/HomeAssets/html.png";
 import node from "../../assets/HomeAssets/nodejs.png";
@@ -42,31 +46,31 @@ function Home() {
               <div className="flex flex-col md:flex-row gap-4 mt-6 mx-auto md:mx-0 items-center justify-center">
                 <div className="flex items-center gap-x-3">
                   <a href="https://github.com/SivaKumar202" target="_blank">
-                    <FaGithub className="cursor-pointer text-3xl hover:scale-110 transition duration-200" />
+                   <img width={45} height={45} src={Github} alt="GitHUb" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/siva-kumar-jujjavarapu/"
                     target="_blank"
                   >
-                    <BsLinkedin className="cursor-pointer text-3xl hover:scale-110 hover:bg-blue-800" />
+                    <img width={45} height={45} src={linkedin} alt="Linkedin" />
                   </a>
-                  <a
+                  {/* <a
                     href="https://www.codechef.com/users/siva_kumar807"
                     target="_blank"
                   >
                     <SiCodechef className="cursor-pointer text-3xl hover:scale-110" />
-                  </a>
+                  </a> */}
                   <a
                     href="mailto:sivakumarjujjavarapu123@gmail.com"
                     target="_blank"
                   >
-                    <MdEmail className="cursor-pointer text-3xl hover:scale-110 transition-transform duration-200" />
+                    <img width={45} height={45} src={Gmail} alt="Gmail" />
                   </a>
                   <a
                     href="https://www.instagram.com/siva_kumar_jujjavarapu/"
                     target="_blank"
                   >
-                    <FaInstagram className="cursor-pointer text-3xl hover:scale-110" />
+                    <img width={45} height={45} src={Insta} alt="Insta" />
                   </a>
                 </div>
 
