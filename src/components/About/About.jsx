@@ -1,5 +1,10 @@
 import React from "react";
-import "./About.css"
+import "./About.css";
+import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
+
+// Assets
+import AboutMe from "../../assets/AboutMe/aboutme.png";
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
 import BootStrap from "../../assets/SkillsAssets/BootStrap.png";
@@ -17,62 +22,128 @@ import Python from "../../assets/SkillsAssets/Python.png";
 import Reactjs from "../../assets/SkillsAssets/Reactjs.png";
 import Redux from "../../assets/SkillsAssets/Redux.png";
 import Tailwind from "../../assets/SkillsAssets/Tailwind.png";
-import TypeScript from "../../assets/SkillsAssets/TypeScript.png";
-import netlify from "../../assets/SkillsAssets/netlify.png";
-import Vercel from "../../assets/SkillsAssets/Vercel.png";
-import AboutMe from "../../assets/AboutMe/aboutme.png";
+
+const skills = [
+  HTML,
+  CSS,
+  BootStrap,
+  js,
+  Reactjs,
+  Redux,
+  Tailwind,
+  MUI,
+  Node,
+  Express,
+  git,
+  github,
+  MongoDB,
+  Python,
+  CPP,
+  FireBase,
+  post,
+];
 
 function About() {
   return (
-<div className="px-4 py-10">
-  <h1 className="text-4xl text-white text-center mt-10 mb-10 font-bold">About Me</h1>
-  <div className="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-7xl mx-auto ">
-    <div className="w-full md:w-1/2">
-      <img src={AboutMe} alt="Siva Kumar" className="rounded-xl shadow-lg"  />
-    </div>
+    <div className="px-4 py-10 text-white relative z-10">
+      <motion.h1
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl text-center mt-10 mb-10 font-bold"
+      >
+        About Me
+      </motion.h1>
 
-    {/* Animated Border Wrapper */}
-    <div className="relative group animated-aboutBorder rounded-2xl p-[2px] w-full md:w-1/2 m-10">
-      <div className="bg-[#1E1E1E] text-white p-6 rounded-2xl shadow-lg transition-all duration-300 group-hover:scale-[1.02]">
-        <h1 className="text-2xl font-bold mb-4">
-          Curious About Me? Here You Go:
-        </h1>
-        <p className="mb-4 leading-relaxed">
-          Hey there! I’m <b>Siva Kumar</b>, a passionate and driven Full Stack
-          Developer dedicated to crafting clean, scalable, and intuitive web
-          applications. I'm currently building real-world projects to strengthen
-          in the <b><span className="text-green-400">M</span><span className="text-orange-400">E</span><span className="text-blue-400">R</span><span className="text-green-400">N</span> Stack</b> (MongoDB, Express, React, Node.js), where I’m
-          actively building real-world projects to sharpen my skills and deliver
-          impactful solutions.
-        </p>
-        <p className="mb-4 leading-relaxed">
-          I’m always excited to collaborate with <b className="bg-gradient-to-r from-[#7873f5] to-[#4ADEDE]  bg-clip-text text-transparent">fellow developers, contribute to open-source projects</b>, and connect with <b className="bg-gradient-to-r from-[#7873f5] via-[#4ADEDE] to-[#C084FC] bg-clip-text text-transparent">like-minded professionals</b> to push the boundaries of what’s possible in tech.
-        </p>
-        <p className="mb-2 font-bold">Skills & Technologies</p>
-        <div className="flex flex-wrap gap-3">
-          <img width={70} height={70} src={HTML} alt="HTML" />
-          <img width={70} height={70} src={CSS} alt="CSS" />
-          <img width={70} height={70} src={BootStrap} alt="Bootstrap" />
-          <img width={70} height={70} src={js} alt="JavaScript" />
-          <img width={70} height={70} src={Reactjs} alt="React" />
-          <img width={70} height={70} src={Redux} alt="Redux" />
-          <img width={70} height={70} src={Tailwind} alt="Tailwind" />
-          <img width={70} height={70} src={MUI} alt="MUI" />
-          <img width={70} height={70} src={Node} alt="Node.js" />
-          <img width={70} height={70} src={Express} alt="Express" />
-          <img width={70} height={70} src={git} alt="Git" />
-          <img width={70} height={70} src={github} alt="GitHub" />
-          <img width={70} height={70} src={MongoDB} alt="MongoDB" />
-          <img width={70} height={70} src={Python} alt="Python" />
-          <img width={70} height={70} src={CPP} alt="C++" />
-          <img width={70} height={70} src={FireBase} alt="Firebase" />
-          <img width={70} height={70} src={post} alt="postMan" />
-        </div>
+      <div className="flex flex-col md:flex-row items-stretch gap-8 max-w-7xl mx-auto h-auto">
+        {/* Parallax Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative bg-[#1E1E1E] p-6 rounded-2xl shadow-lg w-full md:w-1/2 h-full"
+        >
+          <Tilt glareEnable={true} glareMaxOpacity={0.2} scale={1.05}>
+            <div
+              className="min-h-[500px] flex flex-col justify-between
+"
+            >
+              <img
+                src={AboutMe}
+                alt="Siva Kumar"
+                className="rounded-2xl shadow-2xl border border-gray-700 object-cover h-full"
+              />
+            </div>
+          </Tilt>
+        </motion.div>
+
+        {/* Animated Text Content */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative bg-[#1E1E1E] p-6 rounded-2xl shadow-lg w-full md:w-1/2"
+        >
+          <h1 className="text-2xl font-bold mb-4">
+            Curious About Me? Here You Go:
+          </h1>
+
+          <p className="mb-4 leading-relaxed">
+            Hey there! I’m <b>Siva Kumar</b>, a passionate and driven Full Stack
+            Developer dedicated to crafting clean, scalable, and intuitive web
+            applications. I'm currently focused on the{" "}
+            <b className="text-green-400">M</b>
+            <b className="text-orange-400">E</b>
+            <b className="text-blue-400">R</b>
+            <b className="text-green-400">N</b> stack, working on real-world
+            projects.
+          </p>
+
+          <p className="mb-4 leading-relaxed">
+            I love collaborating with{" "}
+            <b className="bg-gradient-to-r from-[#7873f5] to-[#4ADEDE] bg-clip-text text-transparent">
+              fellow developers
+            </b>{" "}
+            and contributing to{" "}
+            <b className="bg-gradient-to-r from-[#FC530A] to-[#C084FC] bg-clip-text text-transparent">
+              open-source projects
+            </b>
+            .
+          </p>
+
+          <p className="mb-2 font-bold">Skills & Technologies</p>
+
+          <motion.div
+            className="flex flex-wrap gap-3 mt-4"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.05,
+                },
+              },
+            }}
+          >
+            {skills.map((icon, index) => (
+              <motion.img
+                key={index}
+                src={icon}
+                alt="Skill"
+                width={60}
+                height={60}
+                className="hover:scale-110 transition-transform"
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              />
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
     </div>
-  </div>
-</div>
-
   );
 }
 

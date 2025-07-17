@@ -1,9 +1,11 @@
 import React from "react";
-import "./index.css"
-import Github from "../../assets/SocialIcons/GitHub.png"
-import Gmail from "../../assets/SocialIcons/Gmail.png"
-import Insta from "../../assets/SocialIcons/instagram.png"
-import linkedin from "../../assets/SocialIcons/Linkedin.png"
+import { motion } from "framer-motion";
+import "./index.css";
+import ParticlesBackground from "../ParticlesBackground"
+import Github from "../../assets/SocialIcons/GitHub.png";
+import Gmail from "../../assets/SocialIcons/Gmail.png";
+import Insta from "../../assets/SocialIcons/instagram.png";
+import linkedin from "../../assets/SocialIcons/Linkedin.png";
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
 import BootStrap from "../../assets/SkillsAssets/BootStrap.png";
@@ -27,10 +29,16 @@ import Vercel from "../../assets/SkillsAssets/Vercel.png";
 
 function Skills() {
   return (
-    <div className="bg-black text-white px-4 py-16">
-      <h1 className="text-center text-4xl md:text-6xl lg:text-7xl font-bold mb-12">
+    <div className=" text-white px-4 py-16">
+      <ParticlesBackground />
+      <motion.h1
+        className="text-center text-4xl md:text-6xl lg:text-7xl font-bold mb-12 text-white drop-shadow-[0_0_3px_#4ADEDE]"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         Skills That Fuel My Passion
-      </h1>
+      </motion.h1>
 
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-8 px-2 md:px-10 lg:px-32">
         {/* First Column */}
@@ -56,42 +64,46 @@ function Skills() {
 
           {/* Back-End */}
           <div className="relative group animated-border rounded-3xl p-[2px]">
-          <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
-            <div className="flex justify-center gap-4 flex-wrap">
-              <img src={Node} alt="Node.js" className="w-16 md:w-20" />
-              <img src={Express} alt="Express.js" className="w-16 md:w-20" />
+            <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="flex justify-center gap-4 flex-wrap">
+                <img src={Node} alt="Node.js" className="w-16 md:w-20" />
+                <img src={Express} alt="Express.js" className="w-16 md:w-20" />
+              </div>
+              <h2 className="text-xl font-semibold mt-4">
+                Back-End Development
+              </h2>
+              <p className="text-gray-300 text-sm mt-2">
+                Developing robust server-side logic and APIs to power dynamic
+                and scalable web applications.
+              </p>
             </div>
-            <h2 className="text-xl font-semibold mt-4">Back-End Development</h2>
-            <p className="text-gray-300 text-sm mt-2">
-              Developing robust server-side logic and APIs to power dynamic and
-              scalable web applications.
-            </p>
-          </div>
           </div>
 
           {/* Personal Development */}
           <div className="relative group animated-border rounded-3xl p-[2px]">
-          <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
-            <div className="flex flex-wrap justify-center gap-3 text-white text-sm">
-              <span className="px-3 py-1 rounded-full bg-[#333]">
-                Time Management
-              </span>
-              <span className="px-3 py-1 rounded-full bg-[#333]">
-                Problem Solving
-              </span>
-              <span className="px-3 py-1 rounded-full bg-[#333]">
-                Communication
-              </span>
-              <span className="px-3 py-1 rounded-full bg-[#333]">
-                Leadership
-              </span>
+            <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="flex flex-wrap justify-center gap-3 text-white text-sm">
+                <span className="px-3 py-1 rounded-full bg-[#333]">
+                  Time Management
+                </span>
+                <span className="px-3 py-1 rounded-full bg-[#333]">
+                  Problem Solving
+                </span>
+                <span className="px-3 py-1 rounded-full bg-[#333]">
+                  Communication
+                </span>
+                <span className="px-3 py-1 rounded-full bg-[#333]">
+                  Leadership
+                </span>
+              </div>
+              <h2 className="text-xl font-semibold mt-4">
+                Personal Development
+              </h2>
+              <p className="text-gray-300 text-sm mt-2">
+                Committed to continuous learning and personal growth to excel in
+                both professional and collaborative environments.
+              </p>
             </div>
-            <h2 className="text-xl font-semibold mt-4">Personal Development</h2>
-            <p className="text-gray-300 text-sm mt-2">
-              Committed to continuous learning and personal growth to excel in
-              both professional and collaborative environments.
-            </p>
-          </div>
           </div>
         </div>
 
@@ -99,48 +111,50 @@ function Skills() {
         <div className="flex flex-col flex-1 gap-y-8">
           {/* Styling & Design */}
           <div className="relative group animated-border rounded-3xl p-[2px]">
-          <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
-            <div className="flex justify-center gap-4 flex-wrap ">
-              <img src={CSS} alt="CSS" className="w-16 md:w-20" />
-              <img src={BootStrap} alt="Bootstrap" className="w-16 md:w-20" />
-              <img src={Tailwind} alt="Tailwind" className="w-16 md:w-20" />
-              <img src={MUI} alt="MUI" className="w-16 md:w-20" />
+            <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="flex justify-center gap-4 flex-wrap ">
+                <img src={CSS} alt="CSS" className="w-16 md:w-20" />
+                <img src={BootStrap} alt="Bootstrap" className="w-16 md:w-20" />
+                <img src={Tailwind} alt="Tailwind" className="w-16 md:w-20" />
+                <img src={MUI} alt="MUI" className="w-16 md:w-20" />
+              </div>
+              <h2 className="text-xl font-semibold mt-4">Styling & Design</h2>
+              <p className="text-gray-300 text-sm mt-2">
+                Crafting visually appealing and responsive designs with advanced
+                styling tools and frameworks.
+              </p>
             </div>
-            <h2 className="text-xl font-semibold mt-4">Styling & Design</h2>
-            <p className="text-gray-300 text-sm mt-2">
-              Crafting visually appealing and responsive designs with advanced
-              styling tools and frameworks.
-            </p>
-          </div>
           </div>
 
           {/* Deployment */}
           <div className="relative group animated-border rounded-3xl p-[2px]">
-          <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
-            <div className="flex justify-center gap-4 flex-wrap ">
-              <img src={Vercel} alt="Vercel" className="w-12 md:w-14" />
-              <img src={netlify} alt="Netlify" className="w-12 md:w-14" />
+            <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="flex justify-center gap-4 flex-wrap ">
+                <img src={Vercel} alt="Vercel" className="w-12 md:w-14" />
+                <img src={netlify} alt="Netlify" className="w-12 md:w-14" />
+              </div>
+              <h2 className="text-xl font-semibold mt-4">Deployment</h2>
+              <p className="text-gray-300 text-sm mt-2">
+                Experienced in deploying and managing applications using modern
+                cloud platforms and tools.
+              </p>
             </div>
-            <h2 className="text-xl font-semibold mt-4">Deployment</h2>
-            <p className="text-gray-300 text-sm mt-2">
-              Experienced in deploying and managing applications using modern
-              cloud platforms and tools.
-            </p>
-          </div>
           </div>
 
           {/* Testing & Debugging */}
           <div className="relative group animated-border rounded-3xl p-[2px]">
-          <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
-            <div className="flex justify-center">
-              <img src={post} alt="Postman" className="w-12 md:w-14" />
+            <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="flex justify-center">
+                <img src={post} alt="Postman" className="w-12 md:w-14" />
+              </div>
+              <h2 className="text-xl font-semibold mt-4">
+                Testing & Debugging
+              </h2>
+              <p className="text-gray-300 text-sm mt-2">
+                Ensuring code quality and reliability through rigorous testing
+                and debugging processes.
+              </p>
             </div>
-            <h2 className="text-xl font-semibold mt-4">Testing & Debugging</h2>
-            <p className="text-gray-300 text-sm mt-2">
-              Ensuring code quality and reliability through rigorous testing and
-              debugging processes.
-            </p>
-          </div>
           </div>
         </div>
 
@@ -148,51 +162,53 @@ function Skills() {
         <div className="flex flex-col flex-1 gap-y-8">
           {/* Programming Languages */}
           <div className="relative group animated-border rounded-3xl p-[2px]">
-          <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
-            <div className="flex justify-center gap-4 flex-wrap">
-              <img src={Python} alt="Python" className="w-16 md:w-20" />
-              <img src={CPP} alt="C++" className="w-16 md:w-20" />
+            <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="flex justify-center gap-4 flex-wrap">
+                <img src={Python} alt="Python" className="w-16 md:w-20" />
+                <img src={CPP} alt="C++" className="w-16 md:w-20" />
+              </div>
+              <h2 className="text-xl font-semibold mt-4">
+                Programming Languages
+              </h2>
+              <p className="text-gray-300 text-sm mt-2">
+                Proficient in problem-solving and applying programming languages
+                to implement efficient data structures and algorithms.
+              </p>
             </div>
-            <h2 className="text-xl font-semibold mt-4">
-              Programming Languages
-            </h2>
-            <p className="text-gray-300 text-sm mt-2">
-              Proficient in problem-solving and applying programming languages
-              to implement efficient data structures and algorithms.
-            </p>
-          </div>
           </div>
 
           {/* Database Management */}
           <div className="relative group animated-border rounded-3xl p-[2px]">
-          <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
-            <div className="flex justify-center gap-4 flex-wrap">
-              <img src={MongoDB} alt="MongoDB" className="w-16 md:w-20" />
-              <img src={FireBase} alt="Firebase" className="w-16 md:w-20" />
+            <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="flex justify-center gap-4 flex-wrap">
+                <img src={MongoDB} alt="MongoDB" className="w-16 md:w-20" />
+                <img src={FireBase} alt="Firebase" className="w-16 md:w-20" />
+              </div>
+              <h2 className="text-xl font-semibold mt-4">
+                Database Management
+              </h2>
+              <p className="text-gray-300 text-sm mt-2">
+                Designing and managing databases to ensure secure and efficient
+                data storage and retrieval.
+              </p>
             </div>
-            <h2 className="text-xl font-semibold mt-4">Database Management</h2>
-            <p className="text-gray-300 text-sm mt-2">
-              Designing and managing databases to ensure secure and efficient
-              data storage and retrieval.
-            </p>
-          </div>
           </div>
 
           {/* Version Control */}
           <div className="relative group animated-border rounded-3xl p-[2px]">
-          <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
-            <div className="flex justify-center gap-4 flex-wrap">
-              <img src={github} alt="GitHub" className="w-16 md:w-20" />
-              <img src={git} alt="Git" className="w-16 md:w-20" />
+            <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="flex justify-center gap-4 flex-wrap">
+                <img src={github} alt="GitHub" className="w-16 md:w-20" />
+                <img src={git} alt="Git" className="w-16 md:w-20" />
+              </div>
+              <h2 className="text-xl font-semibold mt-4">
+                Version Control & Collaboration
+              </h2>
+              <p className="text-gray-300 text-sm mt-2">
+                Effectively managing code and collaborating on projects to
+                ensure seamless teamwork.
+              </p>
             </div>
-            <h2 className="text-xl font-semibold mt-4">
-              Version Control & Collaboration
-            </h2>
-            <p className="text-gray-300 text-sm mt-2">
-              Effectively managing code and collaborating on projects to ensure
-              seamless teamwork.
-            </p>
-          </div>
           </div>
         </div>
       </div>
