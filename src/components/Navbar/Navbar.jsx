@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import resume from "../../assets/SivaKumar_Developer.pdf";
 import { NavLink } from "react-router-dom";
 import { HiOutlineDocumentDownload, HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
@@ -26,9 +27,9 @@ function Navbar() {
 
       {/* Resume Button */}
       <a
-        href="/resume.pdf"
+        href={resume}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="Soon Came"
         className="hidden md:flex border-2 rounded-3xl px-5 py-3 border-[#C68313] hover:bg-[#FC530A] transition duration-300"
       >
         <div className="flex items-center gap-x-2 text-white">
@@ -55,9 +56,9 @@ function Navbar() {
             </NavLink>
           ))}
           <a
-            href="/resume.pdf"
+            href={resume}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="Siva Kumar"
             className="border-2 rounded-3xl px-5 py-3 border-[#C68313] hover:bg-[#FC530A] transition duration-300"
           >
             <div className="flex items-center gap-x-2 text-white">
