@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
 // Assets
-import AboutMe from "../../assets/AboutMe/aboutme.png";
+import AboutMe from "../../assets/AboutMe/AboutMe.png";
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
 import BootStrap from "../../assets/SkillsAssets/BootStrap.png";
@@ -82,7 +82,7 @@ function About() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative bg-[#1E1E1E] p-6 rounded-2xl shadow-lg w-full md:w-1/2"
+          className="relative bg-[#1E1E1E] p-11 rounded-2xl shadow-lg w-full md:w-1/2"
         >
           <h1 className="text-2xl font-bold mb-4">
             Curious About Me? Here You Go:
@@ -100,18 +100,22 @@ function About() {
           </p>
 
           <p className="mb-4 leading-relaxed">
-            I love collaborating with{" "}
+            I’m eager to connect with{" "}
             <b className="bg-gradient-to-r from-[#7873f5] to-[#4ADEDE] bg-clip-text text-transparent">
-              fellow developers
+              professionals
             </b>{" "}
             and contributing to{" "}
             <b className="bg-gradient-to-r from-[#FC530A] to-[#C084FC] bg-clip-text text-transparent">
-              open-source projects
+              open-source projects{" "}
             </b>
-            .
+            and contribute meaningfully to the tech industry
+            <br />
           </p>
+          <b className="leading-relaxed">
+            I'm all ears! Let’s connect and build something awesome together.
+          </b>
 
-          <p className="mb-2 font-bold">Skills & Technologies</p>
+          <p className="mb-2  mt-3 font-bold">Skills & Technologies</p>
 
           <motion.div
             className="flex flex-wrap gap-3 mt-4"
