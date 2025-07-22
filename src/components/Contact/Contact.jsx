@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
 import Gmail from "../../assets/SocialIcons/Gmail.png";
 
 function Contact() {
+  const formRef = useRef();
+  const [status, setStatus] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    emailjs
+      .sendForm(
+        "service_2trn9si",     // e.g. "service_123xyz"
+        "template_tundixb",    // e.g. "template_abc123"
+        formRef.current,
+        "Nt7JsiNpq-RjweGN2"      // e.g. "e9qXYZabc123456"
+      )
+      .then(
+        () => {
+          setStatus("success");
+          formRef.current.reset();
+        },
+        (error) => {
+          console.error(error);
+          setStatus("error");
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -15,17 +42,15 @@ function Contact() {
         viewport={{ once: true }}
         className="max-w-4xl mx-auto bg-white/5 backdrop-blur-lg border border-white/10 p-10 sm:p-14 rounded-3xl shadow-2xl"
       >
-        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="text-4xl sm:text-5xl font-bold mb-6 text-center text-[#FC530A]"
         >
-           Let's Talk
+          Let's Talk
         </motion.h2>
 
-        {/* Subtext */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -36,18 +61,13 @@ function Contact() {
           collaboration, or just tech talk—I'm all ears.
         </motion.p>
 
-        {/* Contact Form */}
-        <form
-          action="https://formspree.io/f/{your-form-id}" // replace with your real Formspree ID
-          method="POST"
-          className="space-y-8"
-        >
-          {/* Inputs */}
+        {/* ✅ Contact Form with EmailJS */}
+        <form ref={formRef} onSubmit={sendEmail} className="space-y-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <motion.input
               whileFocus={{ scale: 1.02 }}
               type="text"
-              name="name"
+              name="from_name"
               placeholder="Your Name"
               required
               className="bg-transparent border border-gray-600 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#FC530A] transition"
@@ -55,7 +75,7 @@ function Contact() {
             <motion.input
               whileFocus={{ scale: 1.02 }}
               type="email"
-              name="email"
+              name="reply_to"
               placeholder="Your Email"
               required
               className="bg-transparent border border-gray-600 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#FC530A] transition"
@@ -71,6 +91,17 @@ function Contact() {
             className="w-full bg-transparent border border-gray-600 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#FC530A] transition"
           ></motion.textarea>
 
+          {/* Status Message */}
+          {status === "success" && (
+            <p className="text-green-400 text-center">Message sent successfully! ✅</p>
+          )}
+          {status === "error" && (
+            <p className="text-red-400 text-center">Oops, something went wrong. ❌</p>
+          )}
+          {status === "sending" && (
+            <p className="text-yellow-400 text-center">Sending...</p>
+          )}
+
           {/* Send Button */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -79,14 +110,14 @@ function Contact() {
           >
             <button
               type="submit"
-              className="bg-[#FC530A] text-black font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-[#e24d00] transition duration-300 ease-in-out"
+              className="bg-[#FC530A] text-black font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-[#e24d00] transition duration-300 ease-in-out cursor-pointer"
             >
-               Send Message
+              Send Message
             </button>
           </motion.div>
         </form>
 
-        {/* Direct Email */}
+        {/* Direct Email Option */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

@@ -32,7 +32,7 @@ function Skills() {
     <div className=" text-white px-4 py-16">
       <ParticlesBackground />
       <motion.h1
-        className="text-center text-4xl md:text-6xl lg:text-7xl font-bold mb-12 text-white drop-shadow-[0_0_3px_#4ADEDE]"
+        className="text-center text-4xl md:text-6xl lg:text-7xl font-bold mb-12 text-white drop-shadow-[2px_2px_2px_#4ADEDE]"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -227,28 +227,28 @@ function Skills() {
               target="_blank"
               rel="noreferrer"
             >
-              <img width={45} height={45} src={Github} alt="GitHUb" />
+              <img width={45} height={45} src={Github} alt="GitHUb" className="hover:scale-120" />
             </a>
             <a
               href="https://www.linkedin.com/in/siva-kumar-jujjavarapu/"
               target="_blank"
               rel="noreferrer"
             >
-              <img width={45} height={45} src={linkedin} alt="Linkedin" />
+              <img width={45} height={45} src={linkedin} alt="Linkedin"  className="hover:scale-120"/>
             </a>
             <a
               href="mailto:sivakumarjujjavarapu123@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <img width={45} height={45} src={Gmail} alt="Mail" />
+              <img width={45} height={45} src={Gmail} alt="Mail" className="hover:scale-120" />
             </a>
             <a
               href="https://www.instagram.com/siva_kumar_jujjavarapu/"
               target="_blank"
               rel="noreferrer"
             >
-              <img width={45} height={45} src={Insta} alt="instagarm" />
+              <img width={45} height={45} src={Insta} alt="instagarm" className="hover:scale-120" />
             </a>
           </div>
         </div>
