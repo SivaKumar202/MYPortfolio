@@ -8,7 +8,7 @@ import Insta from "../../assets/SocialIcons/instagram.png";
 import linkedin from "../../assets/SocialIcons/Linkedin.png";
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
-import BootStrap from "../../assets/SkillsAssets/BootStrap.png";
+import BootStrap from "../../assets/SkillsAssets/Bootstrap.png";
 import CPP from "../../assets/SkillsAssets/C++.png";
 import Express from "../../assets/SkillsAssets/Express.png";
 import FireBase from "../../assets/SkillsAssets/Firebase.png";
