@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "./index.css";
 import Github from "../../assets/SocialIcons/GitHub.png";
 import Gmail from "../../assets/SocialIcons/Gmail.png";
-import Insta from "../../assets/SocialIcons/instagram.png";
+import Insta from "../../assets/SocialIcons/Instagram.png";
 import linkedin from "../../assets/SocialIcons/Linkedin.png";
 import css from "../../assets/HomeAssets/css.png";
 import html from "../../assets/HomeAssets/html.png";
