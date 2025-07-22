@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./index.css";
-import Github from "../../assets/SocialIcons/GitHub.png";
-import Gmail from "../../assets/SocialIcons/Gmail.png";
-import Insta from "../../assets/SocialIcons/instagram.png";
-import linkedin from "../../assets/SocialIcons/Linkedin.png";
+import Github from "../../assets/Socialicons/GitHub.png";
+import Gmail from "../../assets/Socialicons/Gmail.png";
+import Insta from "../../assets/Socialicons/instagram.png";
+import linkedin from "../../assets/Socialicons/Linkedin.png";
 import css from "../../assets/HomeAssets/css.png";
 import html from "../../assets/HomeAssets/html.png";
 import node from "../../assets/HomeAssets/nodejs.png";
