@@ -7,7 +7,7 @@ import Tilt from "react-parallax-tilt";
 import AboutMe from "../../assets/AboutMe/AboutMe.png";
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
-import BootStrap from "../../assets/SkillsAssets/BootStrap.png";
+import BootStrap from "../../assets/SkillsAssets/Bootstrap.png";
 import CPP from "../../assets/SkillsAssets/C++.png";
 import Express from "../../assets/SkillsAssets/Express.png";
 import FireBase from "../../assets/SkillsAssets/Firebase.png";
