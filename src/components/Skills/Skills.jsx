@@ -4,7 +4,7 @@ import "./index.css";
 import ParticlesBackground from "../ParticlesBackground"
 import Github from "../../assets/SocialIcons/GitHub.png";
 import Gmail from "../../assets/SocialIcons/Gmail.png";
-import Insta from "../../assets/SocialIcons/instagram.png";
+import Insta from "../../assets/SocialIcons/Instagram.png";
 import linkedin from "../../assets/SocialIcons/Linkedin.png";
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
