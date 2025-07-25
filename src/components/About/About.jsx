@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
 // Assets
-import AboutMe from "../../assets/AboutMe/AboutMe.png";
+import about from "../../assets/about.svg";
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
 import BootStrap from "../../assets/SkillsAssets/Bootstrap.png";
@@ -69,7 +69,7 @@ function About() {
 "
             >
               <img
-                src={AboutMe}
+                src={about}
                 alt="Siva Kumar"
                 className="rounded-2xl shadow-2xl border border-gray-700 object-cover h-full"
               />
