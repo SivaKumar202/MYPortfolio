@@ -22,7 +22,7 @@ function Navbar() {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="max-w-7xl mt-9 mx-auto flex justify-between items-center px-4 md:px-8 bg-black/60 backdrop-blur-md rounded-2xl shadow-lg relative"
+        className="max-w-7xl m-8 mx-auto flex justify-between items-center px-4 md:px-8 bg-black/60 backdrop-blur-md rounded-2xl shadow-lg relative"
       >
         {/* Brand */}
         <motion.h1

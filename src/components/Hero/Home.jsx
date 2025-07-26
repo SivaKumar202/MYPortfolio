@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./index.css";
-import Github from "../../assets/SocialIcons/GitHub.png";
-import Gmail from "../../assets/SocialIcons/Gmail.png";
-import Insta from "../../assets/SocialIcons/Instagram.png";
-import linkedin from "../../assets/SocialIcons/Linkedin.png";
+//social
+import Github from "../../assets/Social/GitHub.png";
+import Gmail from "../../assets/Social/Gmail.png";
+import linkedin from "../../assets/Social/Linkedin.png";
+
+//Home
 import css from "../../assets/HomeAssets/css.png";
 import html from "../../assets/HomeAssets/html.png";
 import node from "../../assets/HomeAssets/nodejs.png";
@@ -12,12 +14,13 @@ import figma from "../../assets/HomeAssets/figma.png";
 import me from "../../assets/HomeAssets/me.png";
 import ring2 from "../../assets/HomeAssets/Ellipse2.png";
 import ring3 from "../../assets/HomeAssets/Ellipse3.png";
+
 import { FaArrowRightLong } from "react-icons/fa6";
 
 function Home() {
   return (
     <>
-      <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-black via-gray-900 to-[#FC530A] text-white">
+      <div className="relative  overflow-hidden bg-gradient-to-br from-black via-gray-900 to-[#FC530A] text-white">
         {/* Optional Star Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="stars"></div>
@@ -56,7 +59,7 @@ function Home() {
             {/* Social Links */}
             <div className="flex flex-col md:flex-row gap-4 mt-6 mx-auto md:mx-0 items-center justify-center">
               <div className="flex items-center gap-x-3">
-                {[Github, linkedin, Gmail, Insta].map((icon, index) => (
+                {[Github, linkedin, Gmail].map((icon, index) => (
                   <motion.a
                     key={index}
                     whileHover={{ scale: 1.2 }}
@@ -66,7 +69,6 @@ function Home() {
                         "https://github.com/SivaKumar202",
                         "https://www.linkedin.com/in/siva-kumar-jujjavarapu/",
                         "mailto:sivakumarjujjavarapu123@gmail.com",
-                        "https://www.instagram.com/siva_kumar_jujjavarapu/",
                       ][index]
                     }
                     target="_blank"

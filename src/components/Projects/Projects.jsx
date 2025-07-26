@@ -1,6 +1,6 @@
 import React from "react";
 import fashiofy from "../../assets/Projects/fashiofy.png";
-import Github from "../../assets/SocialIcons/GitHub.png";
+import Github from "../../assets/Social/GitHub.png";
 import projectIcon from "../../assets/project.svg";
 import { motion } from "framer-motion";
 import ParticlesBackground from "../ParticlesBackground";
@@ -21,25 +21,33 @@ function Projects() {
       <ParticlesBackground />
 
       {/* Header */}
-      <div className="mb-14 text-center items-center">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="flex"
-        >
-          <img src={projectIcon} alt="Projects Icon" className="w-1/2" />
-          <motion.div className="mt-20">
-          <h2 className="text-6xl font-extrabold text-[#FC530A] tracking-wide mb-5">
-            Projects
-          </h2>
-          <p className="text-gray-400 text-md max-w-xl">
-            Explore some of the work I’ve done — from real-world web apps to team collaborations, built with modern technologies and clean design.
-          </p>
-          </motion.div>
-        </motion.div>
-      </div>
+<div className="mb-14 px-4 sm:px-10 lg:px-20">
+  <motion.div
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    className="flex flex-col lg:flex-row items-center gap-10 text-center lg:text-left"
+  >
+    {/* Image */}
+    <img
+      src={projectIcon}
+      alt="Projects Icon"
+      className="w-full sm:w-2/3 lg:w-1/2 max-w-md"
+    />
+    {/* Text Content */}
+    <motion.div className="mt-10 lg:mt-0 max-w-xl">
+      <h2 className="text-4xl sm:text-5xl font-extrabold text-[#FC530A] tracking-wide mb-5 text-center">
+        Projects
+      </h2>
+      <p className="text-gray-300 text-md sm:text-lg">
+        Explore some of the work I’ve done — from real-world web apps to team collaborations, built with modern technologies and clean design.
+      </p>
+    </motion.div>
+
+  </motion.div>
+</div>
+
 
       {/* Project Card */}
       <motion.div
@@ -153,7 +161,7 @@ function Projects() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mt-16 text-center text-gray-500"
+        className="mt-16 text-center text-white text-2xl"
       >
         <p>More projects coming soon. Stay tuned! 👀</p>
       </motion.div>

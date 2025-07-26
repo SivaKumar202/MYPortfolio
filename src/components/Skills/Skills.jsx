@@ -2,10 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./index.css";
 import ParticlesBackground from "../ParticlesBackground"
-import Github from "../../assets/SocialIcons/GitHub.png";
-import Gmail from "../../assets/SocialIcons/Gmail.png";
-import Insta from "../../assets/SocialIcons/Instagram.png";
-import linkedin from "../../assets/SocialIcons/Linkedin.png";
+import Github from "../../assets/SkillsAssets/github.png";
 import HTML from "../../assets/SkillsAssets/HTML.png";
 import CSS from "../../assets/SkillsAssets/CSS.png";
 import BootStrap from "../../assets/SkillsAssets/Bootstrap.png";
@@ -13,7 +10,6 @@ import CPP from "../../assets/SkillsAssets/C++.png";
 import Express from "../../assets/SkillsAssets/Express.png";
 import FireBase from "../../assets/SkillsAssets/Firebase.png";
 import git from "../../assets/SkillsAssets/GIT.png";
-import github from "../../assets/SkillsAssets/GitHub.png";
 import js from "../../assets/SkillsAssets/js.png";
 import MongoDB from "../../assets/SkillsAssets/MongoDB.png";
 import MUI from "../../assets/SkillsAssets/MUI.png";
@@ -23,9 +19,13 @@ import Python from "../../assets/SkillsAssets/Python.png";
 import Reactjs from "../../assets/SkillsAssets/Reactjs.png";
 import Redux from "../../assets/SkillsAssets/Redux.png";
 import Tailwind from "../../assets/SkillsAssets/Tailwind.png";
-import TypeScript from "../../assets/SkillsAssets/TypeScript.png";
 import netlify from "../../assets/SkillsAssets/netlify.png";
 import Vercel from "../../assets/SkillsAssets/Vercel.png";
+
+//social links
+import Gmail from "../../assets/Social/Gmail.png";
+import linkedin from "../../assets/Social/Linkedin.png";
+import github from "../../assets/Social/GitHub.png"
 
 function Skills() {
   return (
@@ -198,7 +198,7 @@ function Skills() {
           <div className="relative group animated-border rounded-3xl p-[2px]">
             <div className="bg-[#1E1E1E] rounded-3xl shadow-2xl p-6 transition-all duration-300 group-hover:scale-[1.02]">
               <div className="flex justify-center gap-4 flex-wrap">
-                <img src={github} alt="GitHub" className="w-16 md:w-20" />
+                <img src={Github} alt="GitHub" className="w-16 md:w-20" />
                 <img src={git} alt="Git" className="w-16 md:w-20" />
               </div>
               <h2 className="text-xl font-semibold mt-4">
@@ -227,7 +227,7 @@ function Skills() {
               target="_blank"
               rel="noreferrer"
             >
-              <img width={45} height={45} src={Github} alt="GitHUb" className="hover:scale-120" />
+              <img width={45} height={45} src={github} alt="GitHUb" className="hover:scale-120" />
             </a>
             <a
               href="https://www.linkedin.com/in/siva-kumar-jujjavarapu/"
@@ -242,13 +242,6 @@ function Skills() {
               rel="noreferrer"
             >
               <img width={45} height={45} src={Gmail} alt="Mail" className="hover:scale-120" />
-            </a>
-            <a
-              href="https://www.instagram.com/siva_kumar_jujjavarapu/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img width={45} height={45} src={Insta} alt="instagarm" className="hover:scale-120" />
             </a>
           </div>
         </div>
